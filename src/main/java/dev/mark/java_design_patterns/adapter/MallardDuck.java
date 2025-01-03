@@ -1,6 +1,6 @@
 package dev.mark.java_design_patterns.adapter;
  
-public class MullardDuck implements Duck {
+public class MallardDuck implements Duck {
     public void quack() {
         System.out.println("Quack");
     }
