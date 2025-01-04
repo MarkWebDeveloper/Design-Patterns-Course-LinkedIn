@@ -5,6 +5,14 @@ public class Logger implements Observer {
     private float temperature;
     private float windSpeed;
     private float pressure;
+    
+    @SuppressWarnings("unused")
+    private Subject weatherData;
+
+    public Logger(Subject weatherData) {
+        this.weatherData = weatherData;
+        weatherData.registerObserver(this);
+    }
 
     @Override
     public void update(float temperature, float windSpeed, float pressure) {

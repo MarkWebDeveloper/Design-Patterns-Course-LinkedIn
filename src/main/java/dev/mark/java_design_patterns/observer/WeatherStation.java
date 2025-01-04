@@ -8,6 +8,13 @@ public class WeatherStation implements Subject {
     private float windSpeed;
     private float pressure;
     
+    public WeatherStation(float temperature, float windSpeed, float pressure) {
+        this.observers = new ArrayList<Observer>();
+        this.temperature = temperature;
+        this.windSpeed = windSpeed;
+        this.pressure = pressure;
+    }
+
     public void registerObserver(Observer observer) {
         observers.add(observer);
     }
@@ -29,4 +36,19 @@ public class WeatherStation implements Subject {
         this.temperature = temperature;
         notifyObservers();
     }
+
+    public void setWindSpeed(float windSpeed) {
+        this.windSpeed = windSpeed;
+        notifyObservers();
+    }
+
+    public void setPressure(float pressure) {
+        this.pressure = pressure;
+        notifyObservers();
+    }
+
+    public ArrayList<Observer> getObservers() {
+        return observers;
+    }
+
 }

@@ -5,6 +5,8 @@ public class UserInterface implements Observer {
     private float temperature;
     private float windSpeed;
     private float pressure;
+    
+    @SuppressWarnings("unused")
     private Subject weatherData;
 
     public UserInterface(Subject weatherData) {
