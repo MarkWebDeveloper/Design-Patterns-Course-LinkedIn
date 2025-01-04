@@ -3,6 +3,7 @@ package dev.mark.java_design_patterns.observer;
 public class WeatherInfoTest {
 
     static WeatherStation weatherStation = new WeatherStation(25F, 3F, 1005F);
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         UserInterface userInterface = new UserInterface(weatherStation);
         Logger logger = new Logger(weatherStation);
@@ -11,5 +12,6 @@ public class WeatherInfoTest {
         weatherStation.setTemperature(30f);
         System.out.println("-------------------------------------------------");
         weatherStation.setWindSpeed(5f);
+
     }
 }

@@ -5,8 +5,7 @@ public class UserInterface implements Observer {
     private float temperature;
     private float windSpeed;
     private float pressure;
-    
-    @SuppressWarnings("unused")
+
     private Subject weatherData;
 
     public UserInterface(Subject weatherData) {
@@ -24,4 +23,14 @@ public class UserInterface implements Observer {
     public void display() {
         System.out.println("Current temperature: " + temperature + "C degrees." + " Wind speed: " + windSpeed + "km/h." + " Pressure: " + pressure + "hPa.");
     }
+
+    public Subject getWeatherData() {
+        return weatherData;
+    }
+
+    public void setWeatherData(Subject weatherData) {
+        this.weatherData = weatherData;
+    }
+
+    
 }

@@ -5,7 +5,7 @@ public class Logger implements Observer {
     private float temperature;
     private float windSpeed;
     private float pressure;
-    
+
     @SuppressWarnings("unused")
     private Subject weatherData;
 
@@ -24,5 +24,13 @@ public class Logger implements Observer {
 
     public void log() {
         System.out.println("Logging current weather conditions: " + "Temperature: " + temperature + "C degrees." + " Wind speed: " + windSpeed + "km/h." + " Pressure: " + pressure + "hPa.");
+    }
+
+    public Subject getWeatherData() {
+        return weatherData;
+    }
+
+    public void setWeatherData(Subject weatherData) {
+        this.weatherData = weatherData;
     }
 }
