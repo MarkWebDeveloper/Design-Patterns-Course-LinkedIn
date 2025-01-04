@@ -6,7 +6,6 @@ public class Logger implements Observer {
     private float windSpeed;
     private float pressure;
 
-    @SuppressWarnings("unused")
     private Subject weatherData;
 
     public Logger(Subject weatherData) {

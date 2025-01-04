@@ -6,7 +6,6 @@ public class AlertSystem implements Observer {
     private float windSpeed;
     private float pressure;
 
-    @SuppressWarnings("unused")
     private Subject weatherData;
 
     public AlertSystem(Subject weatherData) {
