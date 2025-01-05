@@ -1,7 +1,6 @@
 package dev.mark.java_design_patterns.decorator;
 
 public class Peppers extends ToppingsDecorator {
-    Pizza pizza;
     
     public Peppers(Pizza pizza) {
         this.pizza = pizza;
