@@ -6,10 +6,12 @@ public class Peppers extends ToppingsDecorator {
         this.pizza = pizza;
     }
     
+    @Override
     public String getDescription() {
         return pizza.getDescription() + ", Peppers";
     }
     
+    @Override
     public double cost() {
         return 1.50 + pizza.cost();
     }

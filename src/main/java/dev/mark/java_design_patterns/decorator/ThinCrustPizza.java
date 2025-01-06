@@ -6,6 +6,7 @@ public class ThinCrustPizza extends Pizza {
         description = "Thin Crust Pizza";
     }
 
+    @Override
     public double cost() {
         return 9.99;
     }
